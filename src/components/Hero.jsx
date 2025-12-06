@@ -3,10 +3,9 @@ import React from 'react';
 import { motion } from 'framer-motion'; // Install with: npm install framer-motion
 
 function Hero() {
-  // If not using framer-motion, remove the motion.div components
 
   const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block:'center'});
   };
 
   return (
@@ -60,27 +59,7 @@ function Hero() {
                 I build <span className="text-[#00E5FF] font-semibold">immersive digital experiences</span> 
                 {' '}from frontend elegance to backend robustness
               </motion.p>
-
-              {/* Stats/Highlights */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8"
-              >
-                <div className="text-center p-4 bg-gradient-to-b from-[#0F0F1A] to-[#1A1A2E] border border-[#6B5BFF]/20 rounded-xl">
-                  <div className="text-2xl md:text-3xl font-bold text-[#00E5FF]">50+</div>
-                  <div className="text-[#F1F5F9]/70 text-sm">Projects</div>
-                </div>
-                <div className="text-center p-4 bg-gradient-to-b from-[#0F0F1A] to-[#1A1A2E] border border-[#6B5BFF]/20 rounded-xl">
-                  <div className="text-2xl md:text-3xl font-bold text-[#00E5FF]">3+</div>
-                  <div className="text-[#F1F5F9]/70 text-sm">Years Experience</div>
-                </div>
-                <div className="text-center p-4 bg-gradient-to-b from-[#0F0F1A] to-[#1A1A2E] border border-[#6B5BFF]/20 rounded-xl col-span-2 md:col-span-1">
-                  <div className="text-2xl md:text-3xl font-bold text-[#00E5FF]">100%</div>
-                  <div className="text-[#F1F5F9]/70 text-sm">Client Satisfaction</div>
-                </div>
-              </motion.div>
+              
 
               {/* CTA Buttons */}
               <motion.div 
@@ -100,26 +79,7 @@ function Hero() {
                 </button>
               </motion.div>
 
-              {/* Tech Stack */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="mt-12"
-              >
-                <p className="text-[#F1F5F9]/60 mb-4">Tech I work with:</p>
-                <div className="flex flex-wrap gap-3">
-                  {['React', 'Node.js', 'Next.js', 'TypeScript', 'MongoDB', 'Tailwind'].map((tech, index) => (
-                    <span 
-                      key={tech}
-                      className="px-3 py-1.5 bg-[#6B5BFF]/10 text-[#00E5FF] rounded-full text-sm border border-[#6B5BFF]/20 hover:bg-[#6B5BFF]/20 transition-colors cursor-default"
-                      style={{ animationDelay: `${index * 100}ms` }}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
+              
             </div>
 
             {/* Right Content - Illustration/Image */}
