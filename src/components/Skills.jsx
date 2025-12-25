@@ -12,11 +12,9 @@ function Skills() {
       icon: '💻',
       color: '#6B5BFF',
       skills: [
-        { name: 'React.js', level: 95, description: 'Building dynamic UIs with hooks, context, and custom components' },
-        { name: 'Next.js', level: 90, description: 'Server-side rendering, static generation, and API routes' },
-        { name: 'TypeScript', level: 88, description: 'Type-safe JavaScript development' },
-        { name: 'Tailwind CSS', level: 92, description: 'Utility-first CSS framework for rapid UI development' },
-        { name: 'JavaScript (ES6+)', level: 96, description: 'Modern JavaScript features and patterns' },
+        { name: 'React.js', level: 80, description: 'Building dynamic UIs with hooks, context, and custom components' },
+        { name: 'Tailwind CSS', level: 75, description: 'Utility-first CSS framework for rapid UI development' },
+        { name: 'JavaScript (ES6+)', level: 70, description: 'Modern JavaScript features and patterns' },
         { name: 'HTML5/CSS3', level: 98, description: 'Semantic markup and advanced CSS techniques' },
       ]
     },
@@ -28,10 +26,9 @@ function Skills() {
       skills: [
         { name: 'Node.js', level: 90, description: 'Building scalable server-side applications' },
         { name: 'Express.js', level: 88, description: 'RESTful API development and middleware' },
-        { name: 'Python', level: 85, description: 'Scripting and backend development' },
         { name: 'MongoDB', level: 82, description: 'NoSQL database design and aggregation' },
-        { name: 'PostgreSQL', level: 80, description: 'Relational database management' },
-        { name: 'Firebase', level: 78, description: 'Real-time databases and authentication' },
+        
+      
       ]
     },
     {

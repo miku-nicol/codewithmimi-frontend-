@@ -10,9 +10,9 @@ function About() {
   };
 
   const techStack = {
-    frontend: ['React', 'Next.js', 'Vue.js', 'TypeScript', 'Tailwind CSS', 'SASS'],
-    backend: ['Node.js', 'Python', 'Express', 'Django', 'PostgreSQL', 'MongoDB'],
-    tools: ['Git', 'Docker', 'AWS', 'Figma', 'Jest', 'Webpack']
+    frontend: ['React', 'Vanilla CSS', 'Html', 'Java Script', 'Tailwind CSS'],
+    backend: ['Node.js', 'Express', 'MongoDB','Postman'],
+    tools: ['Git', 'GitHub', 'VS Code', 'Figma', 'Vercel']
   };
 
   const timeline = [
