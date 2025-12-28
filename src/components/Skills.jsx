@@ -39,10 +39,11 @@ function Skills() {
       skills: [
         { name: 'Git & GitHub', level: 94, description: 'Version control and collaborative development' },
         { name: 'Docker', level: 75, description: 'Containerization and deployment' },
-        { name: 'AWS', level: 72, description: 'Cloud infrastructure and services' },
+        { name: 'Vercel', level: 98, description: 'Used in lauching app'},
+
         { name: 'Figma', level: 85, description: 'UI/UX design and prototyping' },
         { name: 'Jest/Testing', level: 80, description: 'Unit and integration testing' },
-        { name: 'Webpack/Vite', level: 82, description: 'Module bundling and build tools' },
+
       ]
     }
   ];
