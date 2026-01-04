@@ -249,52 +249,7 @@ function Skills() {
           )}
         </motion.div>
 
-        {/* Additional Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="mt-20"
-        >
-          <h3 className="text-3xl font-bold text-[#F1F5F9] text-center mb-12">
-            Additional <span className="bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] bg-clip-text text-transparent">Capabilities</span>
-          </h3>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {[
-              { name: 'Responsive Design', icon: '📱', level: 'Expert' },
-              { name: 'UI/UX Design', icon: '🎨', level: 'Advanced' },
-              { name: 'Performance Opt.', icon: '⚡', level: 'Expert' },
-              { name: 'SEO', icon: '🔍', level: 'Intermediate' },
-              { name: 'Agile/Scrum', icon: '🔄', level: 'Advanced' },
-              { name: 'CI/CD', icon: '🚀', level: 'Intermediate' },
-              { name: 'API Design', icon: '🔗', level: 'Expert' },
-              { name: 'Security', icon: '🛡️', level: 'Intermediate' },
-            ].map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="bg-gradient-to-b from-[#1A1A2E] to-[#0F0F1A] border border-[#6B5BFF]/10 rounded-xl p-6 text-center hover:border-[#00E5FF]/30 transition-all group"
-              >
-                <div className="text-3xl mb-3">{skill.icon}</div>
-                <h4 className="text-lg font-bold text-[#F1F5F9] mb-2">{skill.name}</h4>
-                <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
-                  skill.level === 'Expert' 
-                    ? 'bg-green-500/20 text-green-400' 
-                    : skill.level === 'Advanced'
-                    ? 'bg-blue-500/20 text-blue-400'
-                    : 'bg-purple-500/20 text-purple-400'
-                }`}>
-                  {skill.level}
-                </span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+         
 
          
       </div>
