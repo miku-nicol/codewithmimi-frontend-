@@ -38,11 +38,11 @@ function Skills() {
       color: '#9D4EDD',
       skills: [
         { name: 'Git & GitHub', level: 94, description: 'Version control and collaborative development' },
-        { name: 'Docker', level: 75, description: 'Containerization and deployment' },
+        
         { name: 'Vercel', level: 98, description: 'Used in lauching app'},
 
         { name: 'Figma', level: 85, description: 'UI/UX design and prototyping' },
-        { name: 'Jest/Testing', level: 80, description: 'Unit and integration testing' },
+        
 
       ]
     }
