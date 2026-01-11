@@ -15,13 +15,6 @@ function About() {
     tools: ['Git', 'GitHub', 'VS Code', 'Figma', 'Vercel']
   };
 
-  const timeline = [
-    { year: '2025', title: 'Started Coding Journey', desc: 'Began learning web development fundamentals' },
-    { year: '2025', title: 'First Fullstack Project', desc: 'Built and deployed a complete an ecomerce stack application' },
-    { year: '2025', title: 'Professional Experience', desc: 'Started freelancing and contributing to open source' },
-    { year: '2026', title: 'CodeWithMimi Brand', desc: 'Launched personal brand and portfolio' }
-  ];
-
   return (
     <section id="about" className="relative bg-[#0F0F1A] py-20 overflow-hidden">
       {/* Background Elements */}
@@ -99,42 +92,61 @@ function About() {
             </div>
           </motion.div>
 
-          {/* Right Column - Timeline */}
+          {/* Right Column - Image */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="relative"
           >
-            <h3 className="text-2xl font-bold text-[#F1F5F9] mb-8">My Journey</h3>
-            <div className="space-y-8 relative">
-              {/* Timeline line */}
-              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#6B5BFF] via-[#00E5FF] to-transparent"></div>
+            <div className="relative group">
+              {/* Image Container with Gradient Border */}
+              <div className="relative rounded-2xl overflow-hidden  border-transparent bg-gradient-to-br from-[#6B5BFF] via-[#00E5FF] to-purple-500 p-1">
+                {/* Image */}
+                <div className="overflow-hidden rounded-xl aspect-square">
+                  <img 
+                    src="/about.jpeg" 
+                    alt="CodeWithMimi - Fullstack Developer" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    
+                  />
+                </div>
+                
+                {/* Floating Elements */}
+                <div className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] rounded-full blur-lg opacity-50"></div>
+      <div className="absolute -bottom-2 -left-2 w-16 h-16 bg-purple-500 rounded-full blur-lg opacity-30"></div>
+    </div>
               
-              {timeline.map((item, index) => (
-                <motion.div
-                  key={item.year}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative flex items-start gap-6"
-                >
-                  {/* Timeline dot */}
-                  <div className="relative">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#6B5BFF] to-[#00E5FF] rounded-full flex items-center justify-center z-10">
-                      <span className="text-[#F1F5F9] font-bold">{item.year}</span>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#6B5BFF] to-[#00E5FF] rounded-full blur-md opacity-50"></div>
-                  </div>
-                  
-                  {/* Timeline content */}
-                  <div className="flex-1 pt-1">
-                    <h4 className="text-xl font-bold text-[#F1F5F9] mb-2">{item.title}</h4>
-                    <p className="text-[#F1F5F9]/60">{item.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
+            
+               
+              
+              {/* Image Info Card */}
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#1A1A2E] to-[#0F0F1A] border border-[#6B5BFF]/30 rounded-lg p-3 shadow-xl min-w-[220px]">
+      <div className="flex items-center gap-3">
+        <div className="p-2 bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] rounded-lg">
+          <svg className="w-4 h-4 text-[#F1F5F9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+          </svg>
+        </div>
+        <div>
+          <h4 className="text-[#F1F5F9] font-bold text-sm">CodeWithMimi</h4>
+          <p className="text-[#F1F5F9]/70 text-xs">Fullstack Developer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+            {/* Tech Tags */}
+            <div className="flex flex-wrap justify-center gap-3 mt-16">
+              <span className="px-4 py-2 bg-gradient-to-r from-[#6B5BFF]/20 to-[#6B5BFF]/10 border border-[#6B5BFF]/30 rounded-full text-[#F1F5F9] text-sm">
+                React Specialist
+              </span>
+              <span className="px-4 py-2 bg-gradient-to-r from-[#00E5FF]/20 to-[#00E5FF]/10 border border-[#00E5FF]/30 rounded-full text-[#F1F5F9] text-sm">
+                Fullstack Dev
+              </span>
+              <span className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-purple-500/10 border border-purple-500/30 rounded-full text-[#F1F5F9] text-sm">
+                UI/UX Enthusiast
+              </span>
             </div>
           </motion.div>
         </div>
@@ -200,9 +212,6 @@ function About() {
             ))}
           </div>
         </motion.div>
-
-        
-         
       </div>
     </section>
   );
