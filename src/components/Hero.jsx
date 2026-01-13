@@ -115,7 +115,7 @@ function Hero() {
                     <div className="flex ml-8">
                       <span className="text-[#00E5FF] mr-4">2</span>
                       <span className="text-[#F1F5F9]">name:</span>
-                      <span className="text-[#00E5FF] ml-2">"CodeWithMimi"</span>
+                      <span className="text-[#00E5FF] ml-2">"Miracle Uwaifo"</span>
                       <span className="text-[#F1F5F9]">,</span>
                     </div>
                     <div className="flex ml-8">
