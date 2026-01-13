@@ -367,36 +367,6 @@ function Contact() {
             </div>
           </motion.div>
         </div>
-
-        {/* Newsletter Signup (Optional) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-20 bg-gradient-to-r from-[#6B5BFF]/10 via-[#00E5FF]/10 to-purple-500/10 border border-[#6B5BFF]/20 rounded-2xl p-8"
-        >
-          <div className="text-center">
-            <h4 className="text-2xl font-bold text-[#F1F5F9] mb-3">
-              Stay Updated with My Latest Projects
-            </h4>
-            <p className="text-[#F1F5F9]/60 mb-6 max-w-2xl mx-auto">
-              Subscribe to my newsletter for tech insights, project updates, and coding tips.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 bg-[#0F0F1A] border border-[#6B5BFF]/20 rounded-xl px-4 py-3 text-[#F1F5F9] focus:outline-none focus:border-[#6B5BFF] focus:ring-1 focus:ring-[#6B5BFF] transition-all"
-              />
-              <button className="bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] text-[#F1F5F9] font-semibold px-8 py-3 rounded-xl hover:shadow-lg hover:shadow-[#6B5BFF]/20 transition-all duration-300">
-                Subscribe
-              </button>
-            </div>
-            <p className="text-[#F1F5F9]/40 text-sm mt-4">
-              No spam ever. Unsubscribe at any time.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
