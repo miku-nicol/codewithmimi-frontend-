@@ -66,7 +66,7 @@ function About() {
               </div>
 
               <p className="text-[#F1F5F9]/80 text-lg mb-6">
-                Hi, I'm <span className="text-[#00E5FF] font-semibold">CodeWithMimi</span>, a passionate fullstack developer 
+                Hi, I'm <span className="text-[#00E5FF] font-semibold">Miracle Uwaifo</span>, a passionate fullstack developer 
                 dedicated to creating digital solutions that make a difference. With expertise spanning both frontend 
                 and backend technologies, I bridge the gap between beautiful interfaces and powerful functionality.
               </p>
@@ -74,7 +74,7 @@ function About() {
               <p className="text-[#F1F5F9]/70 mb-8">
                 My journey in tech began with curiosity and has evolved into a career focused on building 
                 scalable applications, mentoring other developers, and contributing to the open-source community. 
-                When I'm not coding, you'll find me exploring new frameworks, writing technical articles, 
+                When I'm not coding, you'll find me exploring new frameworks, writing technical articles, reading, 
                 or contributing to developer communities.
               </p>
 
