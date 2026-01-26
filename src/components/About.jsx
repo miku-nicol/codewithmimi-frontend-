@@ -76,7 +76,7 @@ function About() {
                 scalable applications, mentoring other developers, and contributing to the open-source community. 
                 When I'm not coding, you'll find me exploring new frameworks, writing technical articles, reading, 
                 or contributing to developer communities.
-              </p>
+           </p>
 
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
