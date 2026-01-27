@@ -44,18 +44,23 @@ function Contact() {
         </svg>
       ),
       title: "Email",
-      value: "codewithmimi@example.com",
-      link: "mailto:codewithmimi@example.com"
+      value: "miracleuwaifo9@gmail.com",
+      link: "mailto:miracleuwaifo9@gmail.com"
     },
     {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-        </svg>
-      ),
+       icon: (
+  <svg
+    className="w-6 h-6"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path d="M12.04 2C6.56 2 2.1 6.46 2.1 11.94c0 1.94.56 3.83 1.62 5.45L2 22l4.75-1.7a9.9 9.9 0 005.29 1.52h.01c5.48 0 9.95-4.46 9.95-9.94C22 6.46 17.53 2 12.04 2zm5.8 14.14c-.24.67-1.41 1.29-1.94 1.36-.5.07-1.13.1-1.82-.11-.42-.13-.97-.32-1.68-.62-2.95-1.27-4.87-4.23-5.02-4.42-.15-.2-1.2-1.6-1.2-3.05 0-1.45.76-2.17 1.03-2.47.27-.3.59-.37.78-.37h.56c.18 0 .43-.07.67.51.24.59.82 2.02.89 2.17.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.32.4-.45.54-.15.15-.3.31-.13.61.18.3.8 1.32 1.71 2.13 1.18 1.05 2.17 1.38 2.47 1.53.3.15.48.13.66-.08.18-.2.76-.88.96-1.18.2-.3.4-.25.67-.15.27.1 1.7.8 2 .95.3.15.5.22.57.34.07.12.07.69-.17 1.36z" />
+  </svg>
+),
       title: "Let's Connect",
       value: "Available for chats",
-      link: "https://linkedin.com/in/codewithmimi"
+      link: "https://wa.me/2348072009057?text=Hi%20there%20%F0%9F%91%8B%0AI%20found%20your%20profile%20and%20I%E2%80%99m%20interested%20in%20your%20full-stack%20development%20services.%20Can%20we%20talk%20about%20a%20project%20I%20have%20in%20mind%3F"
     },
     {
       icon: (
