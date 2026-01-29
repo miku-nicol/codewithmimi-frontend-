@@ -1,11 +1,15 @@
 // Hero.jsx
 import React from 'react';
-import { motion } from 'framer-motion'; // Install with: npm install framer-motion
+import { motion } from 'framer-motion'; 
 
 function Hero() {
 
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block:'center'});
+  };
+
+  const scrollToProject = () => {
+    document.getElementById('project')?.scrollIntoView({ behavior: 'smooth', block:'center'});
   };
 
   return (
@@ -74,8 +78,10 @@ function Hero() {
                 >
                   Get In Touch
                 </button>
-                <button className="px-8 py-3 border border-[#6B5BFF] text-[#F1F5F9] font-semibold rounded-lg hover:bg-[#6B5BFF]/10 transition-all duration-300">
-                  View Projects
+                <button className="px-8 py-3 border border-[#6B5BFF] text-[#F1F5F9] font-semibold rounded-lg hover:bg-[#6B5BFF]/10 transition-all duration-300"
+                onClick={scrollToProject}
+                >
+                  View Resume
                 </button>
               </motion.div>
 
@@ -148,20 +154,8 @@ function Hero() {
             </motion.div>
           </div>
 
-          {/* Scroll Indicator */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
-            <div className="flex flex-col items-center text-[#F1F5F9]/50">
-              <span className="mb-2 text-sm">Scroll down</span>
-              <div className="w-6 h-10 border-2 border-[#6B5BFF]/50 rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-[#00E5FF] rounded-full mt-2 animate-bounce"></div>
-              </div>
-            </div>
-          </motion.div>
+          
+          
         </div>
       </section>
     </>

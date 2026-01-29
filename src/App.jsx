@@ -16,7 +16,6 @@ function App() {
         <Navbar/>
         <Hero id="home" />
         <About id="about" />
-        <Skills id= "skills" />
         <Projects id="projects" />
         <Contact id="contact" />
         <Footer/>

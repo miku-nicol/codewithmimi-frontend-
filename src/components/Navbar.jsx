@@ -32,7 +32,7 @@ function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-[#F1F5F9] hover:text-[#6B5BFF] transition-colors duration-300 relative group"
+                  className="text-[#F1F5F9] font-mono text-xl hover:text-[#6B5BFF] transition-colors duration-300 relative group"
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#6B5BFF] group-hover:w-full transition-all duration-300"></span>

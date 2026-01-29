@@ -149,63 +149,84 @@ function About() {
 
         {/* Tech Stack Section */}
         <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="mb-20"
+>
+  <h3 className="text-3xl font-bold text-[#F1F5F9] text-center mb-12">
+    My <span className="bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] bg-clip-text text-transparent">Tech Stack</span>
+  </h3>
+  
+  <div className="relative">
+    {/* Timeline line */}
+    <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-gradient-to-r from-[#6B5BFF]/20 via-[#00E5FF]/20 to-[#6B5BFF]/20 hidden md:block"></div>
+    
+    <div className="flex flex-col md:flex-row md:justify-between gap-8">
+      {Object.entries(techStack).map(([category, technologies], catIndex) => (
+        <motion.div
+          key={category}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
+          transition={{ duration: 0.5, delay: catIndex * 0.1 }}
+          className="relative flex-1"
         >
-          <h3 className="text-3xl font-bold text-[#F1F5F9] text-center mb-12">
-            My <span className="bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] bg-clip-text text-transparent">Tech Stack</span>
-          </h3>
+          {/* Timeline node */}
+          <div className="absolute left-1/2 -translate-x-1/2 -top-6 w-12 h-12 rounded-full bg-gradient-to-br from-[#1A1A2E] to-[#0F0F1A] border-2 border-[#6B5BFF]/30 flex items-center justify-center md:relative md:left-auto md:translate-x-0 md:top-auto md:mx-auto md:mb-6">
+            <div className={`p-2 rounded-full ${
+              category === 'frontend' ? 'bg-[#6B5BFF]/20' :
+              category === 'backend' ? 'bg-[#00E5FF]/20' :
+              'bg-purple-500/20'
+            }`}>
+              <svg className="w-5 h-5 text-[#F1F5F9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" 
+                  d={category === 'frontend' ? "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" :
+                  category === 'backend' ? "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" :
+                  "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"} 
+                />
+              </svg>
+            </div>
+          </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {Object.entries(techStack).map(([category, technologies], catIndex) => (
-              <motion.div
-                key={category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: catIndex * 0.1 }}
-                className="bg-gradient-to-b from-[#1A1A2E] to-[#0F0F1A] border border-[#6B5BFF]/20 rounded-2xl p-6"
-              >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className={`p-2 rounded-lg ${
-                    category === 'frontend' ? 'bg-[#6B5BFF]/20' :
-                    category === 'backend' ? 'bg-[#00E5FF]/20' :
-                    'bg-purple-500/20'
-                  }`}>
-                    <svg className="w-5 h-5 text-[#F1F5F9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" 
-                        d={category === 'frontend' ? "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" :
-                        category === 'backend' ? "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" :
-                        "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"} 
-                      />
-                    </svg>
-                  </div>
-                  <h4 className="text-xl font-bold text-[#F1F5F9] capitalize">
-                    {category === 'frontend' ? 'Frontend' : 
-                     category === 'backend' ? 'Backend' : 'Dev Tools'}
-                  </h4>
-                </div>
-                
-                <div className="space-y-3">
-                  {technologies.map((tech, index) => (
-                    <div 
-                      key={tech}
-                      className="flex items-center justify-between p-3 bg-[#0F0F1A] rounded-lg border border-[#6B5BFF]/10 hover:border-[#6B5BFF]/30 transition-all group cursor-pointer"
-                      style={{ animationDelay: `${index * 50}ms` }}
-                    >
-                      <span className="text-[#F1F5F9] group-hover:text-[#00E5FF] transition-colors">
-                        {tech}
-                      </span>
-                      <span className="text-[#6B5BFF] opacity-0 group-hover:opacity-100 transition-opacity">
-                        →
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+          <div className="bg-gradient-to-b from-[#1A1A2E] to-[#0F0F1A] border border-[#6B5BFF]/20 rounded-2xl p-6 md:mt-12">
+            <h4 className="text-xl font-bold text-[#F1F5F9] capitalize text-center mb-6">
+              {category === 'frontend' ? 'Frontend' : 
+               category === 'backend' ? 'Backend' : 'Dev Tools'}
+            </h4>
+            
+            <div className="flex flex-wrap gap-2 justify-center">
+              {technologies.map((tech, index) => (
+                <motion.span
+                  key={tech}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.05 }}
+                  className="px-4 py-2 bg-[#0F0F1A] rounded-full border border-[#6B5BFF]/10 hover:border-[#00E5FF]/40 hover:bg-[#6B5BFF]/5 transition-all text-[#F1F5F9] text-sm cursor-pointer"
+                >
+                  {tech}
+                </motion.span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</motion.div>
+
+<motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16 text-center"
+        >
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#1A1A2E] to-[#0F0F1A] border border-[#6B5BFF]/20 rounded-xl">
+            <div className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse"></div>
+            <span className="text-[#F1F5F9]">
+              Continuously learning and adapting to new technologies
+            </span>
+            <div className="w-2 h-2 rounded-full bg-[#6B5BFF] animate-pulse" style={{ animationDelay: '0.5s' }}></div>
           </div>
         </motion.div>
       </div>
