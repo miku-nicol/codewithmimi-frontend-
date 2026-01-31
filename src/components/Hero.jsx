@@ -37,7 +37,7 @@ function Hero() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-[#6B5BFF]/10 to-[#00E5FF]/10 border border-[#6B5BFF]/30 rounded-full px-4 py-2 mb-6"
               >
                 <span className="w-2 h-2 bg-[#00E5FF] rounded-full animate-ping"></span>
-                <span className="text-[#00E5FF] text-sm font-medium">Fullstack Developer</span>
+                <span className="text-[#00E5FF] text-sm font-medium">MERN Developer</span>
               </motion.div>
 
               {/* Main Heading */}
@@ -127,7 +127,7 @@ function Hero() {
                     <div className="flex ml-8">
                       <span className="text-[#00E5FF] mr-4">3</span>
                       <span className="text-[#F1F5F9]">role:</span>
-                      <span className="text-[#00E5FF] ml-2">"Fullstack Developer"</span>
+                      <span className="text-[#00E5FF] ml-2">"MERN Developer"</span>
                       <span className="text-[#F1F5F9]">,</span>
                     </div>
                     <div className="flex ml-8">
