@@ -23,6 +23,8 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    
     setIsSubmitting(true);
     
     // Simulate API call
