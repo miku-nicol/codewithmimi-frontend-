@@ -21,22 +21,46 @@ function Contact() {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      // Reset status after 5 seconds
-      setTimeout(() => setSubmitStatus(null), 5000);
-    }, 1500);
-  };
+  setIsSubmitting(true);
+  setSubmitStatus(null);
+
+  try {
+    const response = await fetch("http://localhost:9000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setSubmitStatus("success");
+
+      // Clear the form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } else {
+      setSubmitStatus("error");
+    }
+  } catch (error) {
+    console.error("Error sending message:", error);
+    setSubmitStatus("error");
+  }
+
+  setIsSubmitting(false);
+
+  // Reset status after 5 seconds
+  setTimeout(() => setSubmitStatus(null), 5000);
+};
 
   const contactInfo = [
     {
