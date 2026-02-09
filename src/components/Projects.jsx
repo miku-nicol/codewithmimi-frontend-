@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [hoveredProject, setHoveredProject] = useState(null);
+  
 
    
 
@@ -76,6 +77,26 @@ function Projects() {
       featured: false
     }
   ];
+
+  useEffect(() => {
+    fetch("http://localhost:9000/api/project")
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.success){
+        setProject(data.data)// depends on your api
+      }else {
+        console.error("API error:", data.message)
+      }
+      setLoading(false)
+    })
+    .catch((err) => {
+      console.error("Network error:", err)
+      setLoading(false);
+    });
+
+  }, [])
+
+  if (loading) return <p>Loading Project...</p>
 
   
   return (
