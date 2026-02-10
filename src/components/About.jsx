@@ -33,10 +33,10 @@ function About() {
             <span className="w-2 h-2 bg-[#00E5FF] rounded-full animate-pulse"></span>
             <span className="text-[#00E5FF] text-sm font-medium">About Me</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#F1F5F9] mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#F1F5F9] mb-4 font-mono">
             More Than Just <span className="bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] bg-clip-text text-transparent">Code</span>
           </h2>
-          <p className="text-[#F1F5F9]/60 max-w-2xl mx-auto text-lg">
+          <p className="text-[#F1F5F9]/60 max-w-2xl mx-auto text-lg font-serif">
             Crafting digital experiences with passion, precision, and purpose
           </p>
         </motion.div>
@@ -57,22 +57,19 @@ function About() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#F1F5F9] mb-2">My Philosophy</h3>
-                  <p className="text-[#F1F5F9]/70">
+                  <h3 className="text-xl font-bold text-[#F1F5F9] mb-2 font-mono">ME</h3>
+                  <p className="text-[#F1F5F9]/70 font-serif">
                     I believe great software is built at the intersection of elegant design, robust engineering, 
                     and user-centric thinking. Every line of code should serve a purpose.
                   </p>
                 </div>
               </div>
 
-              <p className="text-[#F1F5F9]/80 text-lg mb-6">
+              <p className="text-[#F1F5F9]/80 text-lg mb-6 font-mono">
                 Hi, I'm <span className="text-[#00E5FF] font-semibold">Miracle Uwaifo</span>, most people know me as <span  className="text-[#6B5BFF] font-semibold" >Mimi</span> — a passionate fullstack developer 
-                dedicated to creating digital solutions that make a real difference. I have experience working across both frontend and backend technologies, allowing me to build complete, scalable applications from start to finish.
+                My journey into tech began with curiosity and has grown into a career focused on building efficient, scalable applications and contributing to the open-source community. When I’m not coding, you’ll find me listening to music, catching up on the latest series, reading, or actively engaging with developer communities.
+                dedicated to creating digital solutions that make a real difference. I have experience working across both frontend and backend technologies, allowing me to build complete, scalable applications from start to finish. 
               </p>
-
-              <p className="text-[#F1F5F9]/70 mb-8">
-                My journey into tech began with curiosity and has grown into a career focused on building efficient, scalable applications and contributing to the open-source community. When I’m not coding, you’ll find me exploring new frameworks, catching up on the latest series, reading, or actively engaging with developer communities.
-           </p>
 
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">

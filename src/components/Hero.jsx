@@ -48,7 +48,7 @@ function Hero() {
                 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
               >
                 <span className="block text-[#F1F5F9]">Hello, I'm</span>
-                <span className="bg-gradient-to-r from-[#6B5BFF] via-[#6B5BFF] to-[#00E5FF] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#6B5BFF] via-[#6B5BFF] to-[#00E5FF] bg-clip-text text-transparent font-mono">
                   CodeWithMimi
                 </span>
               </motion.h1>
@@ -58,9 +58,9 @@ function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-xl md:text-2xl text-[#F1F5F9]/80 mb-8 max-w-2xl"
+                className="text-xl md:text-2xl text-[#F1F5F9]/80 mb-8 max-w-2xl font-serif"
               >
-                I build <span className="text-[#00E5FF] font-semibold">immersive digital experiences</span> 
+                I build <span className="text-[#00E5FF] font-semibold font-mono">immersive digital experiences</span> 
                 {' '}from frontend elegance to backend robustness
               </motion.p>
               
@@ -74,11 +74,11 @@ function Hero() {
               >
                 <button 
                   onClick={scrollToContact}
-                  className="px-8 py-3 bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] text-[#F1F5F9] font-semibold rounded-lg hover:shadow-lg hover:shadow-[#6B5BFF]/30 transition-all duration-300 transform hover:-translate-y-1"
+                  className="px-8 py-3 bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] text-[#F1F5F9] font-semibold rounded-lg hover:shadow-lg hover:shadow-[#6B5BFF]/30 transition-all duration-300 transform hover:-translate-y-1 font-mono"
                 >
                   Get In Touch
                 </button>
-                <button className="px-8 py-3 border border-[#6B5BFF] text-[#F1F5F9] font-semibold rounded-lg hover:bg-[#6B5BFF]/10 transition-all duration-300"
+                <button className="px-8 py-3 border border-[#6B5BFF] text-[#F1F5F9] font-semibold rounded-lg hover:bg-[#6B5BFF]/10 transition-all duration-300 font-mono"
                 onClick={scrollToProject}
                 >
                   View Resume

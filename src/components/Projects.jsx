@@ -1,15 +1,18 @@
 // Projects.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [hoveredProject, setHoveredProject] = useState(null);
-  
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+
 
    
 
-  const projects = [
+  const project = [
     {
       id: 1,
       title: 'E-Commerce Platform',
@@ -83,7 +86,7 @@ function Projects() {
     .then((res) => res.json())
     .then((data) => {
       if (data.success){
-        setProject(data.data)// depends on your api
+        setProjects(data.data)// depends on your api
       }else {
         console.error("API error:", data.message)
       }
@@ -143,7 +146,7 @@ function Projects() {
           </h3>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
+              {projects.map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -158,6 +161,11 @@ function Projects() {
                 <div className="relative h-40 overflow-hidden bg-gradient-to-br from-[#6B5BFF]/10 to-[#00E5FF]/10">
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F1A] via-transparent to-transparent z-10"></div>
                   <div className="w-full h-full flex items-center justify-center">
+                    <img
+    src={project.image}
+    alt={project.title}
+    className="w-full h-full object-cover"
+  />
                     <div className="text-3xl font-bold text-[#6B5BFF]/20">{project.title.charAt(0)}</div>
                   </div>
                   
