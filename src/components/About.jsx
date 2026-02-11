@@ -151,8 +151,8 @@ function About() {
   viewport={{ once: true }}
   className="mb-20"
 >
-  <h3 className="text-3xl font-bold text-[#F1F5F9] text-center mb-12">
-    My <span className="bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] bg-clip-text text-transparent">Tech Stack</span>
+  <h3 className="text-3xl font-bold text-[#F1F5F9] text-center mb-12 font-serif">
+    My <span className="bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] bg-clip-text text-transparent font-mono">Tech Stack</span>
   </h3>
   
   <div className="relative">
@@ -167,7 +167,7 @@ function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: catIndex * 0.1 }}
-          className="relative flex-1"
+          className="relative flex-1 font-mono"
         >
           {/* Timeline node */}
           <div className="absolute left-1/2 -translate-x-1/2 -top-6 w-12 h-12 rounded-full bg-gradient-to-br from-[#1A1A2E] to-[#0F0F1A] border-2 border-[#6B5BFF]/30 flex items-center justify-center md:relative md:left-auto md:translate-x-0 md:top-auto md:mx-auto md:mb-6">
@@ -192,14 +192,14 @@ function About() {
                category === 'backend' ? 'Backend' : 'Dev Tools'}
             </h4>
             
-            <div className="flex flex-wrap gap-2 justify-center">
+            <div className="flex flex-wrap gap-2 justify-center font-mono">
               {technologies.map((tech, index) => (
                 <motion.span
                   key={tech}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.05 }}
-                  className="px-4 py-2 bg-[#0F0F1A] rounded-full border border-[#6B5BFF]/10 hover:border-[#00E5FF]/40 hover:bg-[#6B5BFF]/5 transition-all text-[#F1F5F9] text-sm cursor-pointer"
+                  className="px-4 py-2 bg-[#0F0F1A] rounded-full border border-[#6B5BFF]/10 hover:border-[#00E5FF]/40 hover:bg-[#6B5BFF]/5 transition-all text-[#F1F5F9] text-sm cursor-pointer font-mono"
                 >
                   {tech}
                 </motion.span>

@@ -54,7 +54,7 @@ function Footer() {
               </h2>
             </div>
 
-            <p className="text-[#F1F5F9]/70 leading-relaxed">
+            <p className="text-[#F1F5F9]/70 leading-relaxed font-mono">
               Building the future of web, one line of code at a time. 
               Fullstack developer passionate about creating exceptional digital experiences.
             </p>
@@ -68,7 +68,7 @@ function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <h3 className="text-xl font-bold text-[#F1F5F9] mb-6 pb-2 border-b border-[#6B5BFF]/30">
+            <h3 className="text-xl font-bold text-[#F1F5F9] mb-6 pb-2 border-b border-[#6B5BFF]/30 font-mono">
               Quick Links
             </h3>
             <ul className="space-y-3">
@@ -163,7 +163,7 @@ function Footer() {
       </div>
       <div>
         <p className="text-[#F1F5F9]/60 text-sm">Email</p>
-        <p className="text-[#F1F5F9] font-medium group-hover:text-[#00E5FF] transition-colors">
+        <p className="text-[#F1F5F9] font-medium group-hover:text-[#00E5FF] transition-colors font-mono">
           miracleuwaifo9@gmail.com
         </p>
       </div>
