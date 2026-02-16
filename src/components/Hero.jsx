@@ -8,9 +8,15 @@ function Hero() {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block:'center'});
   };
 
-  const scrollToProject = () => {
-    document.getElementById('project')?.scrollIntoView({ behavior: 'smooth', block:'center'});
-  };
+   const handleViewResume = () => {
+  const link = document.createElement("a");
+  link.href = "http://localhost:9000/Miracle_uwaifo_resume.pdf";
+  link.download = "Miracle_uwaifo_resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 
   return (
     <>
@@ -79,9 +85,9 @@ function Hero() {
                   Get In Touch
                 </button>
                 <button className="px-8 py-3 border border-[#6B5BFF] text-[#F1F5F9] font-semibold rounded-lg hover:bg-[#6B5BFF]/10 transition-all duration-300 font-mono"
-                onClick={scrollToProject}
+                onClick={handleViewResume}
                 >
-                  View Resume
+                  Download Resume
                 </button>
               </motion.div>
 
