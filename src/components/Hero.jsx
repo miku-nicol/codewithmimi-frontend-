@@ -8,13 +8,32 @@ function Hero() {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block:'center'});
   };
 
-   const handleViewResume = () => {
-  const link = document.createElement("a");
-  link.href = "http://localhost:9000/Miracle_uwaifo_resume.pdf";
-  link.download = "Miracle_uwaifo_resume.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+   const handleDownloadResume = async () => {
+  try {
+    const response = await fetch('http://localhost:9000/api/resume/download');
+    
+    if (!response.ok) {
+      throw new Error('Download failed');
+    }
+
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'Miracle_Uwaifo_Resume.pdf';
+    
+    // Append, click, and remove without affecting the page
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    // Clean up
+    window.URL.revokeObjectURL(url);
+    
+  } catch (error) {
+    console.error('Error downloading resume:', error);
+    alert('Failed to download resume');
+  }
 };
 
 
@@ -85,7 +104,7 @@ function Hero() {
                   Get In Touch
                 </button>
                 <button className="px-8 py-3 border border-[#6B5BFF] text-[#F1F5F9] font-semibold rounded-lg hover:bg-[#6B5BFF]/10 transition-all duration-300 font-mono"
-                onClick={handleViewResume}
+                onClick={handleDownloadResume}
                 >
                   Download Resume
                 </button>

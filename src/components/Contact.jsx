@@ -161,12 +161,12 @@ function Contact() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-[#6B5BFF]/20 to-[#00E5FF]/20 rounded-full mb-4">
             <span className="w-2 h-2 bg-[#00E5FF] rounded-full animate-pulse"></span>
-            <span className="text-[#00E5FF] text-sm font-medium">Get In Touch</span>
+            <span className="text-[#00E5FF] text-sm font-medium font-mono">Get In Touch</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#F1F5F9] mb-4">
-            Let's <span className="bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] bg-clip-text text-transparent">Build</span> Together
+          <h2 className="text-4xl md:text-5xl font-bold text-[#F1F5F9] mb-4 font-serif">
+            Let's <span className="bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] bg-clip-text text-transparent font-mono">Build</span> Together
           </h2>
-          <p className="text-[#F1F5F9]/60 max-w-2xl mx-auto text-lg">
+          <p className="text-[#F1F5F9]/60 max-w-2xl mx-auto text-lg font-mono">
             Have a project in mind? Let's turn your ideas into reality.
           </p>
         </motion.div>
@@ -180,8 +180,8 @@ function Contact() {
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-[#1A1A2E] to-[#0F0F1A] border border-[#6B5BFF]/20 rounded-2xl p-8 shadow-2xl"
           >
-            <h3 className="text-2xl font-bold text-[#F1F5F9] mb-8">
-              Send me a <span className="bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] bg-clip-text text-transparent">Message</span>
+            <h3 className="text-2xl font-bold text-[#F1F5F9] mb-8 font-mono">
+              Send me a <span className="bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] bg-clip-text text-transparent font-mono">Message</span>
             </h3>
 
             {submitStatus === 'success' && (
@@ -198,7 +198,7 @@ function Contact() {
                   </div>
                   <div>
                     <h4 className="text-emerald-400 font-bold">Message Sent!</h4>
-                    <p className="text-emerald-400/70 text-sm">I'll get back to you within 24 hours.</p>
+                    <p className="text-emerald-400/70 text-sm font">I'll get back to you within 24 hours.</p>
                   </div>
                 </div>
               </motion.div>

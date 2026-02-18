@@ -186,7 +186,7 @@ function Projects() {
                 {/* Project Content */}
                 <div className="p-5">
                   <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-lg font-bold text-[#F1F5F9] group-hover:text-[#00E5FF] transition-colors">
+                    <h3 className="text-lg font-bold text-[#F1F5F9] group-hover:text-[#00E5FF] transition-colors font-serif">
                       {project.title}
                     </h3>
                     <div className="flex gap-1">
@@ -219,7 +219,7 @@ function Projects() {
                     </div>
                   </div>
 
-                  <p className="text-[#F1F5F9]/60 text-sm mb-4 line-clamp-2">
+                  <p className="text-[#F1F5F9]/60 text-sm mb-4 line-clamp-2 font-mono">
                     {project.description}
                   </p>
 
