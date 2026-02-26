@@ -1,6 +1,10 @@
 // About.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ShieldCheck } from 'lucide-react';
+import { BiGridAlt } from 'react-icons/bi';
+import { FiTerminal } from 'react-icons/fi';
+import { MdWindow } from 'react-icons/md';
 
 function About() {
   const fadeInUp = {
@@ -52,9 +56,7 @@ function About() {
             <div className="bg-gradient-to-br from-[#1A1A2E] to-[#0F0F1A] border border-[#6B5BFF]/20 rounded-2xl p-8 shadow-2xl">
               <div className="flex items-start gap-4 mb-6">
                 <div className="p-3 bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] rounded-lg">
-                  <svg className="w-6 h-6 text-[#F1F5F9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
+                   <ShieldCheck/>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#F1F5F9] mb-2 font-mono">ME</h3>
@@ -83,6 +85,17 @@ function About() {
                 </div>
               </div>
             </div>
+            <div className="flex flex-wrap justify-center gap-3 mt-16">
+              <span className="px-4 py-2 bg-gradient-to-r from-[#6B5BFF]/20 to-[#6B5BFF]/10 border border-[#6B5BFF]/30 rounded-full text-[#F1F5F9] text-sm">
+                React Specialist
+              </span>
+              <span className="px-4 py-2 bg-gradient-to-r from-[#00E5FF]/20 to-[#00E5FF]/10 border border-[#00E5FF]/30 rounded-full text-[#F1F5F9] text-sm">
+                Fullstack Dev
+              </span>
+              <span className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-purple-500/10 border border-purple-500/30 rounded-full text-[#F1F5F9] text-sm">
+                UI/UX Enthusiast
+              </span>
+            </div>
           </motion.div>
 
           {/* Right Column - Image */}
@@ -95,52 +108,20 @@ function About() {
           >
             <div className="relative group">
               {/* Image Container with Gradient Border */}
-              <div className="relative rounded-2xl overflow-hidden  border-transparent bg-gradient-to-br from-[#6B5BFF] via-[#00E5FF] to-purple-500 p-1">
+              <div className="relative overflow-hidden p-1">
                 {/* Image */}
-                <div className="overflow-hidden rounded-xl aspect-square">
+                <div className="overflow-hidden ">
                   <img 
-                    src="/about.jpeg" 
+                    src="/Whitee.png" 
                     alt="CodeWithMimi - Fullstack Developer" 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-65 object-cover"
                     
                   />
-                </div>
-                
-                {/* Floating Elements */}
-                <div className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] rounded-full blur-lg opacity-50"></div>
-      <div className="absolute -bottom-2 -left-2 w-16 h-16 bg-purple-500 rounded-full blur-lg opacity-30"></div>
-    </div>
-              
-            
-               
-              
-              {/* Image Info Card */}
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#1A1A2E] to-[#0F0F1A] border border-[#6B5BFF]/30 rounded-lg p-3 shadow-xl min-w-[220px]">
-      <div className="flex items-center gap-3">
-        <div className="p-2 bg-gradient-to-r from-[#6B5BFF] to-[#00E5FF] rounded-lg">
-          <svg className="w-4 h-4 text-[#F1F5F9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-          </svg>
-        </div>
-        <div>
-          <h4 className="text-[#F1F5F9] font-bold text-sm">CodeWithMimi</h4>
-          <p className="text-[#F1F5F9]/70 text-xs">Fullstack Developer</p>
-        </div>
-      </div>
-    </div>
+                </div>    
+    </div>       
   </div>
             {/* Tech Tags */}
-            <div className="flex flex-wrap justify-center gap-3 mt-16">
-              <span className="px-4 py-2 bg-gradient-to-r from-[#6B5BFF]/20 to-[#6B5BFF]/10 border border-[#6B5BFF]/30 rounded-full text-[#F1F5F9] text-sm">
-                React Specialist
-              </span>
-              <span className="px-4 py-2 bg-gradient-to-r from-[#00E5FF]/20 to-[#00E5FF]/10 border border-[#00E5FF]/30 rounded-full text-[#F1F5F9] text-sm">
-                Fullstack Dev
-              </span>
-              <span className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-purple-500/10 border border-purple-500/30 rounded-full text-[#F1F5F9] text-sm">
-                UI/UX Enthusiast
-              </span>
-            </div>
+            
           </motion.div>
         </div>
 
@@ -160,54 +141,45 @@ function About() {
     <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-gradient-to-r from-[#6B5BFF]/20 via-[#00E5FF]/20 to-[#6B5BFF]/20 hidden md:block"></div>
     
     <div className="flex flex-col md:flex-row md:justify-between gap-8">
-      {Object.entries(techStack).map(([category, technologies], catIndex) => (
-        <motion.div
-          key={category}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: catIndex * 0.1 }}
-          className="relative flex-1 font-mono"
-        >
-          {/* Timeline node */}
-          <div className="absolute left-1/2 -translate-x-1/2 -top-6 w-12 h-12 rounded-full bg-gradient-to-br from-[#1A1A2E] to-[#0F0F1A] border-2 border-[#6B5BFF]/30 flex items-center justify-center md:relative md:left-auto md:translate-x-0 md:top-auto md:mx-auto md:mb-6">
-            <div className={`p-2 rounded-full ${
-              category === 'frontend' ? 'bg-[#6B5BFF]/20' :
-              category === 'backend' ? 'bg-[#00E5FF]/20' :
-              'bg-purple-500/20'
-            }`}>
-              <svg className="w-5 h-5 text-[#F1F5F9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" 
-                  d={category === 'frontend' ? "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" :
-                  category === 'backend' ? "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" :
-                  "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"} 
-                />
-              </svg>
-            </div>
-          </div>
-          
-          <div className="bg-gradient-to-b from-[#1A1A2E] to-[#0F0F1A] border border-[#6B5BFF]/20 rounded-2xl p-6 md:mt-12">
-            <h4 className="text-xl font-bold text-[#F1F5F9] capitalize text-center mb-6">
-              {category === 'frontend' ? 'Frontend' : 
-               category === 'backend' ? 'Backend' : 'Dev Tools'}
-            </h4>
-            
-            <div className="flex flex-wrap gap-2 justify-center font-mono">
-              {technologies.map((tech, index) => (
-                <motion.span
-                  key={tech}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.05 }}
-                  className="px-4 py-2 bg-[#0F0F1A] rounded-full border border-[#6B5BFF]/10 hover:border-[#00E5FF]/40 hover:bg-[#6B5BFF]/5 transition-all text-[#F1F5F9] text-sm cursor-pointer font-mono"
-                >
-                  {tech}
-                </motion.span>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-      ))}
+  {Object.entries(techStack).map(([category, technologies], catIndex) => (
+  <motion.div
+    key={category}
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: catIndex * 0.1 }}
+    className="relative flex-1 font-mono"
+  >
+    {/* Timeline node */}
+    <div className="absolute left-1/2 -translate-x-1/2 -top-6 w-12 h-12 rounded-full bg-gradient-to-br from-[#1A1A2E] to-[#0F0F1A] border-2 border-[#6B5BFF]/30 flex items-center justify-center md:relative md:left-auto md:translate-x-0 md:top-auto md:mx-auto md:mb-6">
+      <div className={`p-2 rounded-full ${
+        category === 'frontend' ? 'bg-[#6B5BFF]/20' :
+        category === 'backend' ? 'bg-[#00E5FF]/20' :
+        'bg-purple-500/20'
+      }`}>
+        {category === 'frontend' && <MdWindow className="w-5 h-5 text-[#F1F5F9]" />}
+        {category === 'backend' && <FiTerminal className="w-5 h-5 text-[#F1F5F9]" />}
+        {category === 'tools' && <BiGridAlt className="w-5 h-5 text-[#F1F5F9]" />}
+      </div>
+    </div>
+    
+    <div className="bg-gradient-to-b from-[#1A1A2E] to-[#0F0F1A] border border-[#6B5BFF]/20 rounded-2xl p-6 md:mt-12">
+      <div className="flex flex-wrap gap-2 justify-center font-mono">
+        {technologies.map((tech, index) => (
+          <motion.span
+            key={tech}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: index * 0.05 }}
+            className="px-4 py-2 bg-[#0F0F1A] rounded-full border border-[#6B5BFF]/10 hover:border-[#00E5FF]/40 hover:bg-[#6B5BFF]/5 transition-all text-[#F1F5F9] text-sm cursor-pointer font-mono"
+          >
+            {tech}
+          </motion.span>
+        ))}
+      </div>
+    </div>
+  </motion.div>
+))}
     </div>
   </div>
 </motion.div>
