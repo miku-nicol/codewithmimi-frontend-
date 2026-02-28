@@ -3,34 +3,49 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import {  ExternalLink, FileStack, Folders, Github, LogInIcon } from 'lucide-react';
-import { FiExternalLink } from 'react-icons/fi';
+ 
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [hoveredProject, setHoveredProject] = useState(null);
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+ const API_BASE =
+  import.meta.env.MODE === "development"
+    ? import.meta.env.VITE_LOCAL_API
+    : import.meta.env.VITE_API;
 
-
-  useEffect(() => {
-    fetch("http://localhost:9000/api/project")
+useEffect(() => {
+  fetch(`${API_BASE}/project`)
     .then((res) => res.json())
     .then((data) => {
-      if (data.success){
-        setProjects(data.data)// depends on your api
-      }else {
-        console.error("API error:", data.message)
+      if (data.success) {
+        setProjects(data.data);
+      } else {
+        console.error("API error:", data.message);
       }
-      setLoading(false)
+      setLoading(false);
     })
     .catch((err) => {
-      console.error("Network error:", err)
+      console.error("Network error:", err);
       setLoading(false);
     });
+}, []);
 
-  }, [])
+  if (loading) {
+    return (
+      <section id="projects" className="relative bg-[#0F0F1A] py-20 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#6B5BFF]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#00E5FF]/5 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          
+        </div>
+      </section>
+    );
+  }
 
-  if (loading) return <p>Loading Project...</p>
 
   
   return (
