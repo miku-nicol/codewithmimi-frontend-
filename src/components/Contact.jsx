@@ -24,6 +24,11 @@ function Contact() {
     }));
   };
 
+   const API_BASE =
+  import.meta.env.MODE === "development"
+    ? import.meta.env.VITE_LOCAL_API
+    : import.meta.env.VITE_API;
+
  const handleSubmit = async (e) => {
   e.preventDefault();
 
@@ -31,7 +36,7 @@ function Contact() {
   setSubmitStatus(null);
 
   try {
-    const response = await fetch("http://localhost:9000/api/contact", {
+    const response = await fetch(`${API_BASE}/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -57,9 +62,11 @@ function Contact() {
   } catch (error) {
     console.error("Error sending message:", error);
     setSubmitStatus("error");
+  } finally{
+ setIsSubmitting(false);
   }
 
-  setIsSubmitting(false);
+ 
 
   // Reset status after 5 seconds
   setTimeout(() => setSubmitStatus(null), 5000);

@@ -8,9 +8,14 @@ function Hero() {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block:'center'});
   };
 
+   const API_BASE =
+  import.meta.env.MODE === "development"
+    ? import.meta.env.VITE_LOCAL_API
+    : import.meta.env.VITE_API;
+
    const handleDownloadResume = async () => {
   try {
-    const response = await fetch('http://localhost:9000/api/resume/download');
+    const response = await fetch(`${API_BASE}/resume/download`);
     
     if (!response.ok) {
       throw new Error('Download failed');

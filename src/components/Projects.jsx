@@ -31,21 +31,13 @@ useEffect(() => {
       setLoading(false);
     });
 }, []);
-
-  if (loading) {
-    return (
-      <section id="projects" className="relative bg-[#0F0F1A] py-20 overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#6B5BFF]/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#00E5FF]/5 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          
-        </div>
-      </section>
-    );
-  }
-
+if (loading)
+  return (
+   <div className="flex flex-col justify-center items-center h-40">
+      <div className="animate-spin rounded-full h-10 w-10 border-4 border-gray-300 border-t-[#6B5BFF]"></div>
+      <p className="mt-3 text-sm text-gray-500">Loading projects...</p>
+    </div>
+  );
 
   
   return (
